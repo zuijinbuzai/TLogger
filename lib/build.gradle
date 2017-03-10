@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+}
+
+publish {
+    userOrg = 'zuijinbuzai'
+    repoName = 'android'
+    groupId = 'com.zuijinbuzai'
+    artifactId = 'TLogger'
+    publishVersion = '1.0.0'
+    desc = 'a class help to record the code used time.'
+    website = 'https://github.com/zuijinbuzai'
+}

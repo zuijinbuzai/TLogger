@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
     private Random mRandom = new Random();
     private TLogger mTLogger = new TLogger();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
                 doTask();
             }
         });
+
+        mTLogger = new TLogger();
+        mTLogger.begin("doTask");
+        mTLogger.addSplit("doTaskA");
+        mTLogger.addSplit("doTaskB");
+        mTLogger.dumpToLog();
     }
 
     private void doTask() {

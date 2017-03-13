@@ -2,16 +2,6 @@
 a class help to record the code used time.
 
 ## Install ##
-
-### From repositories ###
-Add jcenter to project repositories
-
-```groovy
-maven {
-    url 'https://dl.bintray.com/zuijinbuzai/android/'
-}
-```
-
 Add compile line to project dependencies
 
 ```groovy
